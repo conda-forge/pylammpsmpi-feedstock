@@ -10,7 +10,7 @@ source:
   sha256: 78373d693b3856feff22d9cf6c86f617fe80371f9fe5ef44e433f4ebb5a9b443
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   noarch: python
 
@@ -21,12 +21,15 @@ requirements:
     - {{ mpi }}
   run:
     - python >2.7
+    - pip
     - mpi4py
     - lammps
 
 test:
   imports:
     - pylammpsmpi
+  commands:
+    - pip check
 
 about:
   home: https://github.com/pyiron/pylammpsmpi
