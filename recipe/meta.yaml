@@ -10,19 +10,18 @@ source:
   sha256: 2cf858efdcd5a1e7678d1ea692de2099da2148dc2b49c535bba3cab1a0938ec6
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
-  noarch: python
 
 requirements:
   host:
     - python >2.7
     - pip
-    - {{ mpi }}
+    - {{ mpi }}  # [not win]
   run:
     - python >2.7
     - pip
-    - mpi4py
+    - mpi4py  # [not win]
     - lammps
     - dask
 
