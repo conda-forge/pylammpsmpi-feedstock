@@ -12,18 +12,19 @@ source:
 build:
   number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
+  skip: true  # [py2k]
 
 requirements:
   host:
-    - python >2.7
+    - python
     - pip
     - {{ mpi }}  # [not win]
   run:
-    - python >2.7
+    - python
     - pip
     - mpi4py  # [not win]
-    - lammps
-    - dask
+    - lammps  # [not win]
+    - dask  # [not win]
 
 test:
   imports:
