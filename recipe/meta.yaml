@@ -1,5 +1,5 @@
 {% set name = "pylammpsmpi" %}
-{% set version = "0.0.3" %}
+{% set version = "0.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2cf858efdcd5a1e7678d1ea692de2099da2148dc2b49c535bba3cab1a0938ec6
+  sha256: 6c9309730543ecbfa286d7d8cb87482663ec154508c01cf76a8e8b5dc6733817
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -37,7 +37,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Parallel Lammps Python interface'
+  summary: Parallel Lammps Python interface
 
   description: |
     Parallel Lammps Python interface
