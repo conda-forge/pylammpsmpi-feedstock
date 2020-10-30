@@ -5,9 +5,13 @@ Home: https://github.com/pyiron/pylammpsmpi
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pylammpsmpi-feedstock/blob/master/LICENSE.txt)
 
 Summary: Parallel Lammps Python interface
+
+Development: https://github.com/pyiron/pylammpsmpi
+
+Documentation: https://pylammpsmpi.readthedocs.io/
 
 Parallel Lammps Python interface
 
