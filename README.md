@@ -122,5 +122,9 @@ Feedstock Maintainers
 =====================
 
 * [@jan-janssen](https://github.com/jan-janssen/)
+* [@muh-hassani](https://github.com/muh-hassani/)
+* [@niklassiemer](https://github.com/niklassiemer/)
+* [@pmrv](https://github.com/pmrv/)
+* [@pyiron-runner](https://github.com/pyiron-runner/)
 * [@srmnitc](https://github.com/srmnitc/)
 
