@@ -1,5 +1,5 @@
 {% set name = "pylammpsmpi" %}
-{% set version = "0.0.6" %}
+{% set version = "0.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 07783ce49d61727a4dee2138822d780de02f6f672722b3f2ca0293ea08e62ac3
+  sha256: a607f627130d27b4991bc1d85bc68b65d6da7c4b3b7db0f2795c68ac9c8a6844
 
 build:
   number: 1
@@ -23,7 +23,7 @@ requirements:
     - python >2.7
     - pip
     - mpi4py
-    - lammps
+    - lammps >=2020.12.24
     - dask
 
 test:
