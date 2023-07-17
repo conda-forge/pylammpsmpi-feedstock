@@ -1,5 +1,5 @@
 {% set name = "pylammpsmpi" %}
-{% set version = "0.1.2" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d5e03fce312bd7c1c3a50ec6063277ef197c196f53eb9acee65a6adff5124e64
+  sha256: cffbddac97823fe792af53019cf4d03c0e2fec0973efbaa7c82a9a2867f60a01
 
 build:
   number: 0
@@ -21,11 +21,10 @@ requirements:
   run:
     - python >3.7
     - pip
-    - mpi4py
-    - cloudpickle >=2.2.1
+    - mpi4py >=3.1.4
     - lammps >=2022.06.23
-    - pympipool >=0.5.0
-    - pyzmq >=25.1.0
+    - pympipool >=0.5.4
+    - numpy >=1.23.5
 
 test:
   imports:
