@@ -1,5 +1,5 @@
 {% set name = "pylammpsmpi" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5f3fe84404872190820d87fd23058c3674792a1ffab170e7b4566dc20a4ae844
+  sha256: f66c589efeea54ff730d56801fd23ebeb457e44fa0897c2e2c3746b78511af7f
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
     - pip
     - mpi4py >=3.1.4
     - lammps >=2022.06.23
-    - pympipool >=0.5.6
+    - pympipool >=0.6.0
     - numpy >=1.23.5
     - ase >=3.22.1
     - scipy >=1.10.1
