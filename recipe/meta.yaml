@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pylammpsmpi-{{ version }}.tar.gz
   sha256: 2e88f4abb1999f0c28c691f003fc6bf71029eabf769cc1d27619bbff3d8004fe
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
@@ -20,31 +20,23 @@ requirements:
     - pip
   run:
     - python >3.7
-    - pip
     - mpi4py >=3.1.4
-    - lammps >=2023.08.02
     - pympipool >=0.7.0
     - numpy >=1.23.5
-    - ase >=3.22.1
-    - scipy >=1.11.2
 
 test:
   imports:
     - pylammpsmpi
   commands:
     - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/pyiron/pylammpsmpi
-  license: BSD-3-Clause
-  license_family: BSD
-  license_file: LICENSE
   summary: Parallel Lammps Python interface
-
-  description: |
-    Parallel Lammps Python interface
-  doc_url: https://pylammpsmpi.readthedocs.io/
-  dev_url: https://github.com/pyiron/pylammpsmpi
+  license: BSD-3-Clause
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
