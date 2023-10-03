@@ -9,13 +9,6 @@ Package license: BSD-3-Clause
 
 Summary: Parallel Lammps Python interface
 
-Development: https://github.com/pyiron/pylammpsmpi
-
-Documentation: https://pylammpsmpi.readthedocs.io/
-
-Parallel Lammps Python interface
-
-
 Current build status
 ====================
 
