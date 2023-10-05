@@ -21,7 +21,7 @@ requirements:
   run:
     - python >3.7
     - mpi4py >=3.1.4
-    - pympipool >=0.7.1
+    - pympipool >=0.7.0
     - numpy >=1.26.0
 
 test:
