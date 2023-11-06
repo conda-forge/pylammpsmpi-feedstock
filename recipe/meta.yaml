@@ -1,5 +1,5 @@
 {% set name = "pylammpsmpi" %}
-{% set version = "0.2.4" %}
+{% set version = "0.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pylammpsmpi-{{ version }}.tar.gz
-  sha256: 7b7fb35d610a316acc08efbb45aa8df6c4420a94f1bb00c45dc9b12d91f6660a
+  sha256: ecc98d08204115d52ad067eb547338fc267768a0b6ac8510060d140f8fe92f8c
 
 build:
   noarch: python
@@ -20,8 +20,8 @@ requirements:
     - pip
   run:
     - python >3.7
-    - mpi4py >=3.1.4
-    - pympipool >=0.7.0
+    - mpi4py >=3.1.5
+    - pympipool >=0.7.2
     - numpy >=1.26.0
 
 test:
