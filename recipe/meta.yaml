@@ -18,6 +18,11 @@ requirements:
   host:
     - python >3.7
     - pip
+    - mpi4py
+    - pympipool
+    - numpy
+    - versioneer
+    - toml
   run:
     - python >3.7
     - mpi4py >=3.1.4,<=3.1.5
