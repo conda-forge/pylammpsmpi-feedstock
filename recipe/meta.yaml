@@ -1,5 +1,5 @@
 {% set name = "pylammpsmpi" %}
-{% set version = "0.2.7" %}
+{% set version = "0.2.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pylammpsmpi-{{ version }}.tar.gz
-  sha256: 3963bb46b0bc725b0f9ee3eb5cd34e6a91b346b18282a1ed12fa2a61da007b05
+  sha256: 0fca132651ddf0026c03acdab1203005b8536665dd8178341f71edc0dfec26c1
 
 build:
   noarch: python
