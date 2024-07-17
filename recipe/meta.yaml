@@ -12,14 +12,14 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
     - python >3.7
     - pip
+    - executorlib
     - mpi4py
-    - pympipool
     - numpy
     - versioneer
     - toml
@@ -27,7 +27,6 @@ requirements:
     - executorlib ==0.0.1
     - python >3.7
     - mpi4py >=3.1.4,<=3.1.6
-    - pympipool >=0.7.0,<=0.8.5
     - numpy >=1.23.5,<=1.26.4
 
 test:
