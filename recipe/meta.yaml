@@ -1,5 +1,5 @@
 {% set name = "pylammpsmpi" %}
-{% set version = "0.2.21" %}
+{% set version = "0.2.22" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pylammpsmpi-{{ version }}.tar.gz
-  sha256: 0c7c345d6aa79cee6aecc796265e073d7703e11403ff3915fe0f9b5f2c234359
-  patches:
-    - structurecheck.patch
+  sha256: aad203e47a3b1e2a3cb7f4cec1b9e5667fa00fb7de63e56e21a0b986a326f55c
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
