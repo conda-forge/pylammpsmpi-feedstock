@@ -23,6 +23,7 @@ requirements:
     - numpy
     - versioneer
     - toml
+    - setuptools
   run:
     - executorlib ==0.0.5
     - python >={{ python_min }}
