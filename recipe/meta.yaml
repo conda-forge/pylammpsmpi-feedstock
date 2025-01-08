@@ -1,5 +1,5 @@
 {% set name = "pylammpsmpi" %}
-{% set version = "0.2.26" %}
+{% set version = "0.2.27" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pylammpsmpi-{{ version }}.tar.gz
-  sha256: 417b6e2d0a8275591819a7ee266e9a276053d1e7d4ff4b401df412a57630e26c
+  sha256: 7e6223cf7606a4139df037875665f4d9cc02cc76f651642660c866121042428d
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -25,7 +25,7 @@ requirements:
     - toml
     - setuptools
   run:
-    - executorlib ==0.0.5
+    - executorlib >=0.0.5,<=0.0.7
     - python >={{ python_min }}
     - mpi4py >=3.1.4,<=4.0.1
     - numpy >=1.23.5,<=1.26.4
