@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pylammpsmpi
-  version: "0.2.38"
+  version: 0.2.38
 
 package:
   name: ${{ name|lower }}
@@ -13,7 +13,7 @@ source:
   sha256: 5fdf57fb917f2d153340b1ee0df1ca97890e756d943f22f02a2f99dd8bf2645e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
