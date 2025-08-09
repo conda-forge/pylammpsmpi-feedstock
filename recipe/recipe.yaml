@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pylammpsmpi
-  version: "0.2.38"
+  version: "0.2.39"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pylammpsmpi-${{ version }}.tar.gz
-  sha256: 5fdf57fb917f2d153340b1ee0df1ca97890e756d943f22f02a2f99dd8bf2645e
+  sha256: b2dec6408ce59224f21bb5ba9f67c81bd3537ee89af24f855a8c3bdd4ce33ea6
 
 build:
   number: 0
@@ -24,9 +24,8 @@ requirements:
     - executorlib
     - mpi4py
     - numpy
-    - versioneer
-    - toml
-    - setuptools
+    - hatchling
+    - hatch-vcs
   run:
     - python >=${{ python_min }}
     - mpi4py >=3.1.4,<=4.1.0
