@@ -29,8 +29,8 @@ requirements:
   run:
     - python >=${{ python_min }}
     - mpi4py >=3.1.4,<=4.1.0
-    - executorlib >=1.2.0,<=1.6.1
-    - numpy >=1.23.5,<=2.3.1
+    - executorlib >=1.2.0,<=1.7.1
+    - numpy >=1.23.5,<=2.3.2
 
 tests:
   - python:
