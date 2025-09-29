@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pylammpsmpi
-  version: "0.3.2"
+  version: "0.3.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pylammpsmpi-${{ version }}.tar.gz
-  sha256: 1b8044a1137efb3cb217c9e773e407e275ab119424e49bc8fe8160eaf67c90e0
+  sha256: c1189a61b2468ab8deb37a6cacf6226cb6ca8f7d0d8a7bb97754e8039b2d9852
 
 build:
   number: 0
