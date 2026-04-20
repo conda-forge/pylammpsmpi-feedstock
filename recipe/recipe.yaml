@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pylammpsmpi
-  version: "0.3.11"
+  version: "0.3.12"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pylammpsmpi-${{ version }}.tar.gz
-  sha256: 0c00c7be7ef245170bcd4cb37b82feb4398d0db8027becf9a8eae4eb32f55a1c
+  sha256: a64a46336c3b8e6de21b13e414897c60533d7c66bf8a06294902ac8779ebe6dd
 
 build:
   number: 0
@@ -29,8 +29,8 @@ requirements:
   run:
     - python >=${{ python_min }}
     - mpi4py >=3.1.4,<=4.1.1
-    - executorlib >=1.9.0,<=1.9.1
-    - numpy >=1.23.5,<=2.4.2
+    - executorlib >=1.9.0,<=1.9.2
+    - numpy >=1.23.5,<=2.4.3
 tests:
   - python:
       imports:
