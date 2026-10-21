@@ -30,7 +30,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - mpi4py >=4.1.2,<=4.1.2
-    - executorlib >=1.9.0,<=1.10.3
+    - executorlib >=1.9.0,<=1.10.4
     - numpy >=2.4.6,<=2.5.3
 tests:
   - python:
